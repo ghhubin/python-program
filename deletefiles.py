@@ -4,7 +4,7 @@ import os;
 import sys;
 import time;
 
-#É¾³ıÖ¸¶¨Ä¿Â¼ÏÂNÌìÇ°µÄÎÄ¼ş
+#åˆ é™¤æŒ‡å®šç›®å½•ä¸‹Nå¤©å‰çš„æ–‡ä»¶
 
 class DeleteLog:
     def __init__(self,filename,days):
@@ -34,6 +34,7 @@ class DeleteLog:
 
 if __name__=='__main__':
     path='E:\\program\\testdir';
-    obj=DeleteLog(path,5);
+    Ndays = 5
+    obj=DeleteLog(path,Ndays);
     obj.delete();
     
