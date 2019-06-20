@@ -5,16 +5,18 @@ import time
 import hashlib
 
 def sendSMS(calledNumber,content):
-    user_url="http://58.53.194.80/swdx/services/SmsBizService?wsdl"
-    apName = 'telhuiyinbi'
-    apPassword = 'hyb123456'
-    compcode = 'hubeitel'
-    userCode = 'zzyeq'
+    user_url="http://192.168.1.1/swdx/services/SmsBizService?wsdl"
+    apName = 'AAAAAAAA'
+    apPassword = 'BBBBBBBB'
+    compcode = 'CCCCCCCC'
+    userCode = 'DDDDDDDD'
     
     timeStamp = str(int(round(time.time() * 1000)))
     apPass=str(hashlib.md5(apName+apPassword+timeStamp).hexdigest())
     nowStr=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-
+
+
+
     client=Client(user_url)
 
     print(client)
@@ -46,6 +48,6 @@ def sendSMS(calledNumber,content):
     print(result.returnDesc)
 
 if __name__ == '__main__':
-    sendSMS('18907181317',u'短信测试。。。。  ')
+    sendSMS('13901234567',u'短信测试。。。。  ')
 
     
