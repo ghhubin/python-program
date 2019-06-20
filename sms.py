@@ -15,8 +15,6 @@ def sendSMS(calledNumber,content):
     apPass=str(hashlib.md5(apName+apPassword+timeStamp).hexdigest())
     nowStr=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
-
-
     client=Client(user_url)
 
     print(client)
